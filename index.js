@@ -1,6 +1,7 @@
 const fs = require("fs");
 const child_process = require("child_process");
-const nodeModulesPath = join(process.cwd(), "node_modules");
+const path = require("path");
+const nodeModulesPath = path.join(process.cwd(), "node_modules");
 
 async function installDeps() {
     return new Promise((res) => {
@@ -22,7 +23,6 @@ if (!fs.existsSync(nodeModulesPath)) {
 }
 
 const { Plugin } = require('powercord/entities');
-const path = require("path");
 
 module.exports = class Encrypt extends Plugin {
     startPlugin() {
