@@ -26,15 +26,15 @@ const path = require("path");
 
 module.exports = class Encrypt extends Plugin {
     startPlugin() {
-        fs.readdirSync(path.join(__dirname, "commands"), "utf8").forEach(c => {
-            let cpath = path.join(__dirname, "commands", c);
+        fs.readdirSync(path.join(__dirname, "src", "commands"), "utf8").forEach(c => {
+            let cpath = path.join(__dirname, "src", "commands", c);
             powercord.api.commands.registerCommand(require(cpath));
         })
     }
 
     pluginWillUnload() {
-        fs.readdirSync(path.join(__dirname, "commands"), "utf8").forEach(c => {
-            let cpath = path.join(__dirname, "commands", c);
+        fs.readdirSync(path.join(__dirname, "src", "commands"), "utf8").forEach(c => {
+            let cpath = path.join(__dirname, "src", "commands", c);
             powercord.api.commands.registerCommand(require(cpath).command);
         })
     }
