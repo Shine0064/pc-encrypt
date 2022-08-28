@@ -1,0 +1,9 @@
+{
+    "name": "Encrypt",
+    "version": "1.0.0",
+    "description": "Encryption and Decryption for Powercord",
+    "author": "Shine#0064",
+    "nsfw": false,
+    "license": "MIT",
+    "permissions": "exp_api"
+}
